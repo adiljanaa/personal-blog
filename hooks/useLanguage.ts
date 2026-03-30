@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, createContext, useContext } from 'react'
-import { Language, getTranslation, getLanguageDirection } from '@/lib/i18n'
+
+type Language = 'zh' | 'ug'
 
 interface LanguageContextType {
   language: Language
@@ -21,6 +22,25 @@ export function useLanguage() {
     throw new Error('useLanguage must be used within LanguageProvider')
   }
   return context
+}
+
+// 简单的翻译函数
+function getTranslation(key: string, language: Language): string {
+  // 简化版本，实际使用时导入完整的翻译文件
+  const translations: Record<string, Record<Language, string>> = {
+    'nav.home': { zh: '首页', ug: 'باش بەت' },
+    'nav.articles': { zh: '文章', ug: 'ماقالىلەر' },
+    'nav.tags': { zh: '标签', ug: 'بەلگىلەر' },
+    'nav.about': { zh: '关于', ug: 'ھەققىدە' },
+    'site.title': { zh: '个人博客', ug: 'شەخسىي بىلوگ' }
+  }
+  
+  return translations[key]?.[language] || key
+}
+
+// 语言方向配置
+function getLanguageDirection(language: Language): 'ltr' | 'rtl' {
+  return language === 'ug' ? 'rtl' : 'ltr'
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
