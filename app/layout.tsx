@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import ThemeProvider from '@/components/ThemeProvider'
-import LanguageProvider from '@/components/LanguageProvider'
+import { LanguageProvider } from '@/hooks/useLanguage'
 
 const inter = Inter({ subsets: ['latin'] })
 
