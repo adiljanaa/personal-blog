@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '@/hooks/useLanguage'
-import { useTheme } from 'next-themes'
+import { useTheme } from '@/components/ThemeProvider'
 import { 
   Home, 
   BookOpen, 

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useTheme } from 'next-themes'
+import { useTheme } from './ThemeProvider'
 import { Moon, Sun } from 'lucide-react'
 
 interface ThemeToggleProps {
@@ -20,7 +20,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       {theme === 'dark' ? (
         <Sun size={20} className="text-yellow-500" />
       ) : (
-        <Moon size={20} className="text-gray-700" />
+        <Moon size={20} className="text-gray-700 dark:text-gray-300" />
       )}
     </button>
   )
