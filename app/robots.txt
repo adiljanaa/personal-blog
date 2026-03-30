@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://blog.example.com/sitemap.xml
+
+# 爬虫频率限制
+Crawl-delay: 2
+
+# 指定每个搜索引擎的访问频率
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+# 屏蔽特定路径
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
