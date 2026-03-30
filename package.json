@@ -16,7 +16,7 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
     "react-markdown": "^8.0.0",
-    "remark-gfm": "^13.0.0",
+    "remark-gfm": "^4.0.0",
     "react-icons": "^4.0.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.300.0",
